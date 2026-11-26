@@ -34,7 +34,9 @@ python3 -I conformance.py personal_allowance --cmd "python3 -I vendors/pa_correc
 python3 -I conformance.py sdlt --cmd "python3 -I vendors/sdlt_correct.py" --code vendors/sdlt_correct.py --samples 12 --report sdlt.json
 ```
 
-Replace both occurrences of `_correct.py` with `_buggy.py` to see a failure.
+`--samples 12` keeps this first try quick: it adds 12 generated inputs to the
+published cases. Leave it out for the full check, which adds 2,000. Replace
+both occurrences of `_correct.py` with `_buggy.py` to see a failure.
 For your own program, pass its command to `--cmd` and the files that do the
 calculation to `--code`: the report then records their fingerprint, so it says
 which code passed. The checker sends one JSON request per process and expects
@@ -58,7 +60,7 @@ area's pinned Lean toolchain:
 
 ## Fingerprint
 
-Kit fingerprint (SHA-256): `70bf1d7602964c0903e6b5c68da121fd077d72e09140cd1cbdbbd63abd23fb1d`
+Kit fingerprint (SHA-256): `a63952fbac4663d7f485ef8230dd97d272acf3f2b8fffd7149564040f01040cc`
 
 The fingerprint covers every supplied file except this README, which contains
 the digest. In sorted relative path order, hash each UTF-8 path with forward

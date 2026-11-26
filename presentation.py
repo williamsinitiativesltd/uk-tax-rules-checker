@@ -153,6 +153,8 @@ th { background:#f2f5f2 }
 .hash,.identifier { width:1%; font-size:.82em }
 .identifier code { white-space:nowrap }
 code,pre { overflow-wrap:anywhere }
+/* In a table, "anywhere" lets the column shrink below a field name and split it on a phone; break-word keeps names whole. */
+td code { overflow-wrap:break-word }
 #how-it-works table { min-width:34rem }
 thead { display:table-header-group }
 pre { white-space:pre-wrap }
