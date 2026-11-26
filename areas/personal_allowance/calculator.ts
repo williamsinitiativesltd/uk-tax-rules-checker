@@ -1,4 +1,4 @@
-import { hundredths } from "./decimal.js";
+import { hundredths } from "../../ts/decimal.js";
 
 interface Rules {
     years: Record<string, { amount: number, citation: string }>;

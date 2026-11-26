@@ -5,8 +5,8 @@
     "strict": true,
     "allowJs": true,
     "noEmitOnError": true,
-    "rootDir": ".",
+    "rootDir": "..",
     "outDir": "../build"
   },
-  "include": ["*.ts", "check.mjs"]
+  "include": ["*.ts", "check.mjs", "../areas/*/calculator.ts"]
 }

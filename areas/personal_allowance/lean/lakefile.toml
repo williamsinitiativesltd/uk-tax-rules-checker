@@ -1,9 +1,9 @@
 name = "personal_allowance"
-defaultTargets = ["PersonalAllowance", "checker"]
+defaultTargets = ["PersonalAllowance", "model"]
 
 [[lean_lib]]
 name = "PersonalAllowance"
 
 [[lean_exe]]
-name = "checker"
+name = "model"
 root = "Main"

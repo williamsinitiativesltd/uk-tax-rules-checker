@@ -1,5 +1,5 @@
-import { calculate as allowance } from "./personal_allowance.js";
-import { calculate as duty } from "./sdlt.js";
+import { calculate as allowance } from "../areas/personal_allowance/calculator.js";
+import { calculate as duty } from "../areas/sdlt/calculator.js";
 
 function input(root: HTMLElement, name: string, title: string, type: string) {
     const label = document.createElement("label");

@@ -137,7 +137,8 @@ def run(area, rules, suite, command, samples, seed, timeout, workers=1, *, code=
     run_cases = input_set(area, rules, suite, samples, seed)
     fingerprint = sha256(cases_json([(r["input"], r["expected"]) for r in run_cases]).encode("utf-8")).hexdigest()
     report = dict(area=area.folder.name, suite_version=version, seed=seed, published=len(suite["cases"]),
-                  differential=samples, case_fingerprint=fingerprint, code_fingerprint=None,
+                  differential=samples, full_check=seed == DEFAULT_SEED and samples == DEFAULT_SAMPLES,
+                  case_fingerprint=fingerprint, code_fingerprint=None,
                   scope=SCOPE, failures=[])
 
     if answers is not None:
@@ -182,8 +183,12 @@ def run(area, rules, suite, command, samples, seed, timeout, workers=1, *, code=
 
 def summary(report):
     failures = report["failures"]
+    check = ("Full published check." if report["full_check"] else
+             f"Not the full published check: {report['differential']} generated inputs with seed {report['seed']}. "
+             f"The full check uses {DEFAULT_SAMPLES} with seed {DEFAULT_SEED}. Use this run for testing only.")
     lines = [f"{'FAIL' if failures else 'PASS'} {report['area']}: {report['published']} published cases, "
              f"{report['differential']} extra inputs, {len(failures)} failed (seed {report['seed']})",
+             check,
              "Case set fingerprint (SHA-256): " + report["case_fingerprint"]]
     if "answers_sha256" in report:
         lines.extend([report["provenance"], "Answers file SHA-256: " + report["answers_sha256"]])

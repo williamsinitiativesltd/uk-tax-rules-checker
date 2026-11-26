@@ -1,9 +1,9 @@
 name = "sdlt"
-defaultTargets = ["Sdlt", "checker"]
+defaultTargets = ["Sdlt", "model"]
 
 [[lean_lib]]
 name = "Sdlt"
 
 [[lean_exe]]
-name = "checker"
+name = "model"
 root = "Main"

@@ -156,6 +156,7 @@ code,pre { overflow-wrap:anywhere }
 /* In a table, "anywhere" lets the column shrink below a field name and split it on a phone; break-word keeps names whole. */
 td code { overflow-wrap:break-word }
 #how-it-works table { min-width:34rem }
+#how-it-works td:first-child { white-space:nowrap }
 thead { display:table-header-group }
 pre { white-space:pre-wrap }
 figure { margin:1rem 0; max-width:50rem }

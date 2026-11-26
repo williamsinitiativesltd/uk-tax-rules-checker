@@ -1,4 +1,4 @@
-import { hundredths } from "./decimal.js";
+import { hundredths } from "../../ts/decimal.js";
 
 interface Version {
     from: string;

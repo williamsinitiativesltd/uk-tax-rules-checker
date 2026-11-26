@@ -12,5 +12,5 @@ def load_inputs(name):
     folder = root / "areas" / name
     if not name.isidentifier() or not (folder / "rules.json").is_file():
         raise ValueError(f"Unknown area: {name}")
-    suite = json.loads((root / (name + "-cases.json")).read_text(encoding="utf-8"))
+    suite = json.loads((folder / "cases.json").read_text(encoding="utf-8"))
     return RuleArea(folder, import_module(f"areas.{name}")), load_rules(folder), suite

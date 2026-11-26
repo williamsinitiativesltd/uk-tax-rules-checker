@@ -1,7 +1,7 @@
 {
   "rule": "personal_allowance",
-  "input_schema": "personal_allowance-input.schema.json",
-  "output_schema": "personal_allowance-output.schema.json",
+  "input_schema": "input.schema.json",
+  "output_schema": "output.schema.json",
   "cases": [
     {
       "id": "PA-001",

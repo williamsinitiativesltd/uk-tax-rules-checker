@@ -1,7 +1,7 @@
 {
   "rule": "sdlt",
-  "input_schema": "sdlt-input.schema.json",
-  "output_schema": "sdlt-output.schema.json",
+  "input_schema": "input.schema.json",
+  "output_schema": "output.schema.json",
   "cases": [
     {
       "id": "SDLT-001",
