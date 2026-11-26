@@ -1,0 +1,8 @@
+{
+ "file": "PersonalAllowance.lean",
+ "sha256": "612765746cdd5afe4b421725cdc4d892a421fa690eb5853ad4fee26a46ea9a10",
+ "lean": "4.36.0 (commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9)",
+ "checked": "2026-11-26",
+ "result": "no errors, no output: every theorem proved by Lean's kernel",
+ "command": "lean lean/PersonalAllowance.lean"
+}

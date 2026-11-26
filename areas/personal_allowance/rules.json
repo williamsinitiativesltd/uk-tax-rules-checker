@@ -1,0 +1,107 @@
+{
+  "years": {
+    "2009": {
+      "amount": 6475,
+      "citation": "FA 2009 s3(1)(a)"
+    },
+    "2010": {
+      "amount": 6475,
+      "citation": "Section 35(1) as amended by FA 2009 s3(1)(a); no change for 2010-11 (question PA3)"
+    },
+    "2011": {
+      "amount": 7475,
+      "citation": "FA 2011 s3(1)"
+    },
+    "2012": {
+      "amount": 8105,
+      "citation": "FA 2012 s3(1)"
+    },
+    "2013": {
+      "amount": 9440,
+      "citation": "FA 2013 s2(1)"
+    },
+    "2014": {
+      "amount": 10000,
+      "citation": "FA 2014 s1(3)(b)"
+    },
+    "2015": {
+      "amount": 10600,
+      "citation": "FA 2014 s2(1)(b), as amended by FA 2015 s3(2)"
+    },
+    "2016": {
+      "amount": 11000,
+      "citation": "FA 2015 s5(1)(a), as amended by F(No.2)A 2015 s5(a)"
+    },
+    "2017": {
+      "amount": 11500,
+      "citation": "FA 2015 s5(1)(b), as amended by FA 2016 s3(1)"
+    },
+    "2018": {
+      "amount": 11850,
+      "citation": "SI 2017/1184 art 3(a)"
+    },
+    "2019": {
+      "amount": 12500,
+      "citation": "FA 2019 s5(2)"
+    },
+    "2020": {
+      "amount": 12500,
+      "citation": "FA 2019 s5(2)"
+    },
+    "2021": {
+      "amount": 12570,
+      "citation": "SI 2021/111 art 3(a)"
+    },
+    "2022": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2)"
+    },
+    "2023": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2)"
+    },
+    "2024": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2)"
+    },
+    "2025": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2)"
+    },
+    "2026": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2), as extended by FA 2023 s5(3)"
+    },
+    "2027": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2), as extended by FA 2023 s5(3)"
+    },
+    "2028": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2), as extended by FA 2026 s10(3)"
+    },
+    "2029": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2), as extended by FA 2026 s10(3)"
+    },
+    "2030": {
+      "amount": 12570,
+      "citation": "FA 2021 s5(2), as extended by FA 2026 s10(3)"
+    }
+  },
+  "taper": {
+    "first_year": 2010,
+    "income_limit": 100000,
+    "divisor": 2,
+    "rounding": "remaining allowance up to a whole pound",
+    "citation": "ITA 2007 s35(2)-(3)",
+    "commencement": "FA 2009 s4(4)"
+  },
+  "tax": {
+    "basic_limit_pounds": 37700,
+    "bands": "ITA 2007 s10",
+    "basic_limit": "FA 2021 s5(1)",
+    "higher_limit": "FA 2023 s6",
+    "rates": "FA 2026 s2"
+  }
+}

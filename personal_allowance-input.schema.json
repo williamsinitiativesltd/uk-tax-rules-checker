@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "tax_year_start": {
+      "type": "integer",
+      "minimum": 2009,
+      "maximum": 2030
+    },
+    "adjusted_net_income_pounds": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "tax_year_start",
+    "adjusted_net_income_pounds"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,813 @@
+{
+  "rule": "sdlt",
+  "input_schema": "sdlt-input.schema.json",
+  "output_schema": "sdlt-output.schema.json",
+  "cases": [
+    {
+      "id": "SDLT-001",
+      "description": "3 December 2014, £124,999: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 124999
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-002",
+      "description": "3 December 2014, £125,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 125000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-003",
+      "description": "3 December 2014, £125,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 125001
+      },
+      "expected": {
+        "tax_pounds": 1250
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-004",
+      "description": "3 December 2014, £249,999: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 249999
+      },
+      "expected": {
+        "tax_pounds": 2499
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-005",
+      "description": "3 December 2014, £250,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 250000
+      },
+      "expected": {
+        "tax_pounds": 2500
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-006",
+      "description": "3 December 2014, £250,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 250001
+      },
+      "expected": {
+        "tax_pounds": 7500
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-007",
+      "description": "3 December 2014, £295,000: worked example",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 295000
+      },
+      "expected": {
+        "tax_pounds": 8850
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": true
+    },
+    {
+      "id": "SDLT-008",
+      "description": "3 December 2014, £499,999: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 499999
+      },
+      "expected": {
+        "tax_pounds": 14999
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-009",
+      "description": "3 December 2014, £500,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 500000
+      },
+      "expected": {
+        "tax_pounds": 15000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-010",
+      "description": "3 December 2014, £500,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 500001
+      },
+      "expected": {
+        "tax_pounds": 20000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-011",
+      "description": "3 December 2014, £999,999: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 999999
+      },
+      "expected": {
+        "tax_pounds": 39999
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-012",
+      "description": "3 December 2014, £1,000,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 1000000
+      },
+      "expected": {
+        "tax_pounds": 40000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-013",
+      "description": "3 December 2014, £1,000,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 1000001
+      },
+      "expected": {
+        "tax_pounds": 50000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-014",
+      "description": "3 December 2014, £1,999,999: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 1999999
+      },
+      "expected": {
+        "tax_pounds": 99999
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-015",
+      "description": "3 December 2014, £2,000,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 2000000
+      },
+      "expected": {
+        "tax_pounds": 100000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-016",
+      "description": "3 December 2014, £2,000,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-03",
+        "price_pounds": 2000001
+      },
+      "expected": {
+        "tax_pounds": 140000
+      },
+      "provision": "The table in section 55(2) of the Finance Act 2003 as in force on 3 December 2014",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-017",
+      "description": "4 December 2014, £250,000: band boundary check",
+      "input": {
+        "effective_date": "2014-12-04",
+        "price_pounds": 250000
+      },
+      "expected": {
+        "tax_pounds": 2500
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, inserted by Stamp Duty Land Tax Act 2015 s1 with effect from 4 December 2014 under s2(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-018",
+      "description": "4 December 2014, £250,001: band boundary check",
+      "input": {
+        "effective_date": "2014-12-04",
+        "price_pounds": 250001
+      },
+      "expected": {
+        "tax_pounds": 2500
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, inserted by Stamp Duty Land Tax Act 2015 s1 with effect from 4 December 2014 under s2(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-019",
+      "description": "4 December 2014, £295,000: worked example",
+      "input": {
+        "effective_date": "2014-12-04",
+        "price_pounds": 295000
+      },
+      "expected": {
+        "tax_pounds": 4750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, inserted by Stamp Duty Land Tax Act 2015 s1 with effect from 4 December 2014 under s2(2)",
+      "also_proved": true
+    },
+    {
+      "id": "SDLT-020",
+      "description": "1 January 2021, £295,000: worked example",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 295000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": true
+    },
+    {
+      "id": "SDLT-021",
+      "description": "1 January 2021, £499,999: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 499999
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-022",
+      "description": "1 January 2021, £500,000: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 500000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-023",
+      "description": "1 January 2021, £500,001: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 500001
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-024",
+      "description": "1 January 2021, £924,999: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 924999
+      },
+      "expected": {
+        "tax_pounds": 21249
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-025",
+      "description": "1 January 2021, £925,000: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 925000
+      },
+      "expected": {
+        "tax_pounds": 21250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-026",
+      "description": "1 January 2021, £925,001: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 925001
+      },
+      "expected": {
+        "tax_pounds": 21250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-027",
+      "description": "1 January 2021, £1,499,999: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 1499999
+      },
+      "expected": {
+        "tax_pounds": 78749
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-028",
+      "description": "1 January 2021, £1,500,000: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 1500000
+      },
+      "expected": {
+        "tax_pounds": 78750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-029",
+      "description": "1 January 2021, £1,500,001: band boundary check",
+      "input": {
+        "effective_date": "2021-01-01",
+        "price_pounds": 1500001
+      },
+      "expected": {
+        "tax_pounds": 78750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1(2), end date substituted by Finance Act 2021 s87(2)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-030",
+      "description": "1 July 2021, £249,999: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 249999
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-031",
+      "description": "1 July 2021, £250,000: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 250000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-032",
+      "description": "1 July 2021, £250,001: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 250001
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-033",
+      "description": "1 July 2021, £924,999: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 924999
+      },
+      "expected": {
+        "tax_pounds": 33749
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-034",
+      "description": "1 July 2021, £925,000: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 925000
+      },
+      "expected": {
+        "tax_pounds": 33750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-035",
+      "description": "1 July 2021, £925,001: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 925001
+      },
+      "expected": {
+        "tax_pounds": 33750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-036",
+      "description": "1 July 2021, £1,499,999: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 1499999
+      },
+      "expected": {
+        "tax_pounds": 91249
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-037",
+      "description": "1 July 2021, £1,500,000: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 1500000
+      },
+      "expected": {
+        "tax_pounds": 91250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-038",
+      "description": "1 July 2021, £1,500,001: band boundary check",
+      "input": {
+        "effective_date": "2021-07-01",
+        "price_pounds": 1500001
+      },
+      "expected": {
+        "tax_pounds": 91250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2020, s1A(2), inserted by Finance Act 2021 s87(3)",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-039",
+      "description": "31 March 2025, £249,999: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 249999
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-040",
+      "description": "31 March 2025, £250,000: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 250000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-041",
+      "description": "31 March 2025, £250,001: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 250001
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-042",
+      "description": "31 March 2025, £295,000: worked example",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 295000
+      },
+      "expected": {
+        "tax_pounds": 2250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": true
+    },
+    {
+      "id": "SDLT-043",
+      "description": "31 March 2025, £924,999: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 924999
+      },
+      "expected": {
+        "tax_pounds": 33749
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-044",
+      "description": "31 March 2025, £925,000: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 925000
+      },
+      "expected": {
+        "tax_pounds": 33750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-045",
+      "description": "31 March 2025, £925,001: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 925001
+      },
+      "expected": {
+        "tax_pounds": 33750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-046",
+      "description": "31 March 2025, £1,499,999: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 1499999
+      },
+      "expected": {
+        "tax_pounds": 91249
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-047",
+      "description": "31 March 2025, £1,500,000: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 1500000
+      },
+      "expected": {
+        "tax_pounds": 91250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-048",
+      "description": "31 March 2025, £1,500,001: band boundary check",
+      "input": {
+        "effective_date": "2025-03-31",
+        "price_pounds": 1500001
+      },
+      "expected": {
+        "tax_pounds": 91250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A as modified by the Stamp Duty Land Tax (Temporary Relief) Act 2023, s1(1) and s1(2), for transactions with an effective date from 23 September 2022 to 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-049",
+      "description": "15 April 2025, £124,999: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 124999
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-050",
+      "description": "15 April 2025, £125,000: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 125000
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-051",
+      "description": "15 April 2025, £125,001: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 125001
+      },
+      "expected": {
+        "tax_pounds": 0
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-052",
+      "description": "15 April 2025, £249,999: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 249999
+      },
+      "expected": {
+        "tax_pounds": 2499
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-053",
+      "description": "15 April 2025, £250,000: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 250000
+      },
+      "expected": {
+        "tax_pounds": 2500
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-054",
+      "description": "15 April 2025, £250,001: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 250001
+      },
+      "expected": {
+        "tax_pounds": 2500
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-055",
+      "description": "15 April 2025, £295,000: worked example",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 295000
+      },
+      "expected": {
+        "tax_pounds": 4750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": true
+    },
+    {
+      "id": "SDLT-056",
+      "description": "15 April 2025, £924,999: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 924999
+      },
+      "expected": {
+        "tax_pounds": 36249
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-057",
+      "description": "15 April 2025, £925,000: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 925000
+      },
+      "expected": {
+        "tax_pounds": 36250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-058",
+      "description": "15 April 2025, £925,001: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 925001
+      },
+      "expected": {
+        "tax_pounds": 36250
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-059",
+      "description": "15 April 2025, £1,499,999: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 1499999
+      },
+      "expected": {
+        "tax_pounds": 93749
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-060",
+      "description": "15 April 2025, £1,500,000: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 1500000
+      },
+      "expected": {
+        "tax_pounds": 93750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-061",
+      "description": "15 April 2025, £1,500,001: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 1500001
+      },
+      "expected": {
+        "tax_pounds": 93750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    },
+    {
+      "id": "SDLT-062",
+      "description": "15 April 2025, £2,000,000: band boundary check",
+      "input": {
+        "effective_date": "2025-04-15",
+        "price_pounds": 2000000
+      },
+      "expected": {
+        "tax_pounds": 153750
+      },
+      "provision": "Finance Act 2003 s55(1B) Table A, unmodified once the Stamp Duty Land Tax (Temporary Relief) Act 2023 period ended on 31 March 2025",
+      "also_proved": false
+    }
+  ]
+}

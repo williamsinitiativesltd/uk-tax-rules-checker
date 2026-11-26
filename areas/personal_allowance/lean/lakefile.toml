@@ -1,0 +1,9 @@
+name = "personal_allowance"
+defaultTargets = ["PersonalAllowance", "checker"]
+
+[[lean_lib]]
+name = "PersonalAllowance"
+
+[[lean_exe]]
+name = "checker"
+root = "Main"

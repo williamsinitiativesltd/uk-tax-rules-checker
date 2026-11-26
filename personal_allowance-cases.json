@@ -1,0 +1,670 @@
+{
+  "rule": "personal_allowance",
+  "input_schema": "personal_allowance-input.schema.json",
+  "output_schema": "personal_allowance-output.schema.json",
+  "cases": [
+    {
+      "id": "PA-001",
+      "description": "2009-10, income £1,000,000",
+      "input": {
+        "tax_year_start": 2009,
+        "adjusted_net_income_pounds": 1000000
+      },
+      "expected": {
+        "allowance_pounds": 6475
+      },
+      "provision": "FA 2009 s3(1)(a)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-002",
+      "description": "2010-11, income £100,001",
+      "input": {
+        "tax_year_start": 2010,
+        "adjusted_net_income_pounds": 100001
+      },
+      "expected": {
+        "allowance_pounds": 6475
+      },
+      "provision": "Section 35(1) as amended by FA 2009 s3(1)(a); no change for 2010-11 (question PA3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-003",
+      "description": "2010-11, income £100,002",
+      "input": {
+        "tax_year_start": 2010,
+        "adjusted_net_income_pounds": 100002
+      },
+      "expected": {
+        "allowance_pounds": 6474
+      },
+      "provision": "Section 35(1) as amended by FA 2009 s3(1)(a); no change for 2010-11 (question PA3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-004",
+      "description": "2010-11, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2010,
+        "adjusted_net_income_pounds": 112949
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "Section 35(1) as amended by FA 2009 s3(1)(a); no change for 2010-11 (question PA3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-005",
+      "description": "2010-11, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2010,
+        "adjusted_net_income_pounds": 112950
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "Section 35(1) as amended by FA 2009 s3(1)(a); no change for 2010-11 (question PA3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-006",
+      "description": "2011-12, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2011,
+        "adjusted_net_income_pounds": 114949
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2011 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-007",
+      "description": "2011-12, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2011,
+        "adjusted_net_income_pounds": 114950
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2011 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-008",
+      "description": "2012-13, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2012,
+        "adjusted_net_income_pounds": 116209
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2012 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-009",
+      "description": "2012-13, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2012,
+        "adjusted_net_income_pounds": 116210
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2012 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-010",
+      "description": "2013-14, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2013,
+        "adjusted_net_income_pounds": 118879
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2013 s2(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-011",
+      "description": "2013-14, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2013,
+        "adjusted_net_income_pounds": 118880
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2013 s2(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-012",
+      "description": "2014-15, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2014,
+        "adjusted_net_income_pounds": 119999
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2014 s1(3)(b); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-013",
+      "description": "2014-15, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2014,
+        "adjusted_net_income_pounds": 120000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2014 s1(3)(b); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-014",
+      "description": "2015-16, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2015,
+        "adjusted_net_income_pounds": 121199
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2014 s2(1)(b), as amended by FA 2015 s3(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-015",
+      "description": "2015-16, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2015,
+        "adjusted_net_income_pounds": 121200
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2014 s2(1)(b), as amended by FA 2015 s3(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-016",
+      "description": "2016-17, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2016,
+        "adjusted_net_income_pounds": 121999
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2015 s5(1)(a), as amended by F(No.2)A 2015 s5(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-017",
+      "description": "2016-17, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2016,
+        "adjusted_net_income_pounds": 122000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2015 s5(1)(a), as amended by F(No.2)A 2015 s5(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-018",
+      "description": "2017-18, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2017,
+        "adjusted_net_income_pounds": 122999
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2015 s5(1)(b), as amended by FA 2016 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-019",
+      "description": "2017-18, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2017,
+        "adjusted_net_income_pounds": 123000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2015 s5(1)(b), as amended by FA 2016 s3(1); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-020",
+      "description": "2018-19, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2018,
+        "adjusted_net_income_pounds": 123699
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "SI 2017/1184 art 3(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-021",
+      "description": "2018-19, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2018,
+        "adjusted_net_income_pounds": 123700
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "SI 2017/1184 art 3(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-022",
+      "description": "2019-20, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2019,
+        "adjusted_net_income_pounds": 124999
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2019 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-023",
+      "description": "2019-20, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2019,
+        "adjusted_net_income_pounds": 125000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2019 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-024",
+      "description": "2020-21, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2020,
+        "adjusted_net_income_pounds": 124999
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2019 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-025",
+      "description": "2020-21, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2020,
+        "adjusted_net_income_pounds": 125000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2019 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-026",
+      "description": "2021-22, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2021,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "SI 2021/111 art 3(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-027",
+      "description": "2021-22, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2021,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "SI 2021/111 art 3(a); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-028",
+      "description": "2022-23, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2022,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-029",
+      "description": "2022-23, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2022,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-030",
+      "description": "2023-24, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2023,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-031",
+      "description": "2023-24, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2023,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-032",
+      "description": "2024-25, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2024,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-033",
+      "description": "2024-25, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2024,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-034",
+      "description": "2025-26, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2025,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-035",
+      "description": "2025-26, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2025,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-036",
+      "description": "2026-27, income £100,000",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 100000
+      },
+      "expected": {
+        "allowance_pounds": 12570
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-037",
+      "description": "2026-27, income £100,001",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 100001
+      },
+      "expected": {
+        "allowance_pounds": 12570
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-038",
+      "description": "2026-27, income £100,002",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 100002
+      },
+      "expected": {
+        "allowance_pounds": 12569
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-039",
+      "description": "2026-27, income £105,000: GOV.UK's worked example",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 105000
+      },
+      "expected": {
+        "allowance_pounds": 10070
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-040",
+      "description": "2026-27, income £110,000",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 110000
+      },
+      "expected": {
+        "allowance_pounds": 7570
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-041",
+      "description": "2026-27, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-042",
+      "description": "2026-27, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-043",
+      "description": "2026-27, income £150,000",
+      "input": {
+        "tax_year_start": 2026,
+        "adjusted_net_income_pounds": 150000
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-044",
+      "description": "2027-28, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2027,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-045",
+      "description": "2027-28, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2027,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2023 s5(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-046",
+      "description": "2028-29, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2028,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-047",
+      "description": "2028-29, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2028,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-048",
+      "description": "2029-30, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2029,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-049",
+      "description": "2029-30, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2029,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-050",
+      "description": "2030-31, £1 below the income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2030,
+        "adjusted_net_income_pounds": 125139
+      },
+      "expected": {
+        "allowance_pounds": 1
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    },
+    {
+      "id": "PA-051",
+      "description": "2030-31, income where the allowance reaches zero",
+      "input": {
+        "tax_year_start": 2030,
+        "adjusted_net_income_pounds": 125140
+      },
+      "expected": {
+        "allowance_pounds": 0
+      },
+      "provision": "FA 2021 s5(2), as extended by FA 2026 s10(3); ITA 2007 s35(2) and s35(3)",
+      "also_proved": true
+    }
+  ]
+}

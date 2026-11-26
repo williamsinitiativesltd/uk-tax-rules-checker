@@ -1,0 +1,8 @@
+{
+ "file": "Sdlt.lean",
+ "sha256": "406798dcea3596dfd37e512d1565a8dea4258e6f278e4c337754757241b5bef0",
+ "lean": "4.36.0 (commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9)",
+ "checked": "2026-11-26",
+ "result": "no errors, no output: every theorem proved by Lean's kernel",
+ "command": "lean lean/Sdlt.lean"
+}

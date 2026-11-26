@@ -1,0 +1,9 @@
+name = "sdlt"
+defaultTargets = ["Sdlt", "checker"]
+
+[[lean_lib]]
+name = "Sdlt"
+
+[[lean_exe]]
+name = "checker"
+root = "Main"
